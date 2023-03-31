@@ -36,7 +36,19 @@ function currentTempterature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "3d70761461911850f9f376be6e53d77b";
-let city = "Brazil";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(currentTempterature);
+function search(city) {
+  let apiKey = "3d70761461911850f9f376be6e53d77b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(currentTempterature);
+}
+
+function handlesubmit(event) {
+  event.preventDefault();
+  let cityImputElement = document.querySelector("#city-input");
+  search(cityImputElement.value);
+}
+
+search("New York");
+
+let cityform = document.querySelector("#search-form");
+cityform.addEventListener("submit", handlesubmit);
