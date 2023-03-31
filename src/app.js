@@ -22,7 +22,7 @@ function currentTempterature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
-
+  celsiusTemperature = response.data.main.temp;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   conditionsElement.innerHTML = response.data.weather[0].description;
@@ -48,7 +48,19 @@ function handlesubmit(event) {
   search(cityImputElement.value);
 }
 
-search("New York");
+function showFahTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempterature");
+  let fahrenheitTempterature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTempterature);
+}
+
+let celsiusTemperature = null;
 
 let cityform = document.querySelector("#search-form");
 cityform.addEventListener("submit", handlesubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahTemp);
+
+search("New York");
