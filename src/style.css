@@ -67,3 +67,13 @@ li:first-letter {
 .units a {
   text-decoration: none;
 }
+
+.weather-temp .active {
+  color: black;
+  font-weight: bold;
+  cursor: default;
+}
+
+.weather-temp .active:hover {
+  text-decoration: none;
+}
