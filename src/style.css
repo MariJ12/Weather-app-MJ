@@ -1,6 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/075/736/original/767265929480.jpg?1680901153");
+  background-size: 1500px;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  margin: 8px;
 }
 
 h1 {
@@ -31,7 +36,7 @@ li:first-letter {
   text-transform: capitalize;
 }
 .container {
-  margin-top: 180px;
+  margin-top: 90px;
 }
 .weather-app-wrapper {
   max-width: 600px;
@@ -39,8 +44,9 @@ li:first-letter {
 }
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 1px solid rgb(255, 0, 128);
   border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.96);
 }
 
 .weather-temp img {
@@ -57,6 +63,12 @@ li:first-letter {
   color: rgb(255, 0, 128);
   font-size: 64px;
   line-height: 1;
+}
+.btn {
+  background-color: blueviolet;
+}
+.form-control {
+  border-color: blueviolet;
 }
 
 .units {
@@ -88,9 +100,18 @@ li:first-letter {
 }
 .weather-forecast-temperature {
   font-size: 16px;
-  color: black;
+  color: rgb(46, 45, 45);
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+
+.mj {
+  text-decoration: none;
+  color: rgb(255, 0, 128);
+}
+.mjhub {
+  text-decoration: none;
+  margin-left: 10px;
 }
